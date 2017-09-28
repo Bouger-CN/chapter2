@@ -24,4 +24,5 @@ public class CircleA {
 	public void a(){
 		circleB.b();
 	}
+	
 }

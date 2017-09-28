@@ -219,7 +219,7 @@ public class HelloTest3 {
 	//≤‚ ‘¥˙¬Îcn.javass.spring.chapter3.CircleTest  
 	@Test(expected = BeanCurrentlyInCreationException.class)  
 	public void testCircleBySetterAndPrototype () throws Throwable {  
-	    try {  
+	    try {
 	        ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext(  
 	"chapter3/circleInjectBySetterAndPrototype.xml");  
 	        System.out.println(ctx.getBean("circleA"));  
@@ -228,6 +228,23 @@ public class HelloTest3 {
 	        Throwable e1 = e.getCause().getCause().getCause();  
 	        throw e1;  
 	    }  
+	} 
+	
+	@Test(expected = BeanCurrentlyInCreationException.class)  
+	public void testCircleBySetterAndSingleton2() throws Throwable {  
+	    try {  
+	        ClassPathXmlApplicationContext ctx =  
+	new ClassPathXmlApplicationContext();  
+	        ctx.setConfigLocation("chapter3/circleInjectBySetterAndSingleton.xml");  
+	        ctx.refresh();  
+	    }  
+	    catch (Exception e) {  
+	        Throwable e1 = e.getCause().getCause().getCause();  
+	        throw e1;  
+	    }  
 	}  
+	
+	
+	
 	
 }
