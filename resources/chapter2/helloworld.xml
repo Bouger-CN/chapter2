@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<beans  
+xmlns="http://www.springframework.org/schema/beans"  
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+xmlns:context="http://www.springframework.org/schema/context"  
+xsi:schemaLocation="  
+http://www.springframework.org/schema/beans        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd  
+http://www.springframework.org/schema/context                http://www.springframework.org/schema/context/spring-context-3.0.xsd">  
+  <!-- id 表示你这个组件的名字，class表示组件类 -->  
+	<bean id="hello" class="cn.bouger.spring.chapter2.helloworld.HelloImpl"></bean> 
+	<!-- id与name要唯一 -->
+	<bean name="helloname" class="cn.bouger.spring.chapter2.helloworld.HelloImpl"></bean>
+	<!-- 同时设置id 和name -->
+	<bean id="helloid" name="hello3" class="cn.bouger.spring.chapter2.helloworld.HelloImpl"></bean>   
+	<!-- 多个别名 -->
+	<bean id="hello4" name="alias41,alias42 alias43;alias44" class="cn.bouger.spring.chapter2.helloworld.HelloImpl"></bean>   
+	<bean id="hello5" class="cn.bouger.spring.chapter2.helloworld.HelloImpl"></bean>
+	<!-- 此时同一个别名标签中不能设置多个别名  别名为alias51;alias52 -->
+	<alias name="hello5" alias="alias51;alias52"/>
+	<alias name="hello5" alias="alias53"/>
+	<alias name="hello5" alias="alias54"/>
+</beans>  
