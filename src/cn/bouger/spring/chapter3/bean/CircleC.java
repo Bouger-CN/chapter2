@@ -4,7 +4,7 @@ public class CircleC {
 	public CircleC(){
 		
 	}
-	public CircleC(CircleA circlea){
+	public CircleC(CircleA circleA){
 		
 	}
 	private CircleA circleA;

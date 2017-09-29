@@ -4,14 +4,14 @@ public class CircleB {
 	public CircleB(){
 		
 	}
-	public CircleB(CircleC circlec){
+	public CircleB(CircleC circleC){
 		
 	}
 	private CircleC circleC;
-	public CircleC getCirclec() {
+	public CircleC getCircleC() {
 		return circleC;
 	}
-	public void setCirclec(CircleC circleC) {
+	public void setCircleC(CircleC circleC) {
 		this.circleC = circleC;
 	}
 	

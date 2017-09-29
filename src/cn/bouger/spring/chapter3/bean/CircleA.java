@@ -12,13 +12,13 @@ public class CircleA {
 	/**
 	 * @return the cirlcleB
 	 */
-	public CircleB getCirlcleB() {
+	public CircleB getCircleB() {
 		return circleB;
 	}
 	/**
 	 * @param cirlcleB the cirlcleB to set
 	 */
-	public void setCirlcleB(CircleB circleB) {
+	public void setCircleB(CircleB circleB) {
 		this.circleB = circleB;
 	}
 	public void a(){

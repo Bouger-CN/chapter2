@@ -230,19 +230,19 @@ public class HelloTest3 {
 	    }  
 	} 
 	
-	@Test(expected = BeanCurrentlyInCreationException.class)  
-	public void testCircleBySetterAndSingleton2() throws Throwable {  
-	    try {  
-	        ClassPathXmlApplicationContext ctx =  
-	new ClassPathXmlApplicationContext();  
-	        ctx.setConfigLocation("chapter3/circleInjectBySetterAndSingleton.xml");  
-	        ctx.refresh();  
-	    }  
-	    catch (Exception e) {  
-	        Throwable e1 = e.getCause().getCause().getCause();  
-	        throw e1;  
-	    }  
-	}  
+//	@Test(expected = BeanCurrentlyInCreationException.class)  
+//	public void testCircleBySetterAndSingleton2() throws Throwable {  
+//	    try {  
+//	        ClassPathXmlApplicationContext ctx =new ClassPathXmlApplicationContext();  
+//	        ctx.setConfigLocation("chapter3/circleInjectBySetterAndSingleton.xml");  
+//	        ctx .setAllowCircularReferences(false);//禁用循环引用
+//	        ctx.refresh();  
+//	    }  
+//	    catch (Exception e) {  
+//	        Throwable e1 = e.getCause().getCause().getCause();  
+//	        throw e1;  
+//	    }  
+//	}  
 	
 	
 	
