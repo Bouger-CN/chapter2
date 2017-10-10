@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans  xmlns="http://www.springframework.org/schema/beans"  
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+        xsi:schemaLocation="  
+           http://www.springframework.org/schema/beans  
+           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd 
+           http://www.springframework.org/schema/context                
+           http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+    <bean class="cn.bouger.spring.chapter3.Hello3Impl"/>              
+    <bean id="helloApi" class="cn.bouger.spring.chapter2.helloworld.HelloImpl"/>  
+	<!-- 注意我们没有注入helloApi，所以测试时会报错 -->  
+	<bean id="bean"  
+	     class="cn.bouger.spring.chapter3.bean.HelloApiDecorator"  
+	     dependency-check="all">  
+	<property name="message" value="Haha"></property>
+	<property name="helloApi" ref="helloApi"/> 
+	
+	<!-- 
+	
+	 -->
+	  
+	</bean>        
+            
+</beans> 

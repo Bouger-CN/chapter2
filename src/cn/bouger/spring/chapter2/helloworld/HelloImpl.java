@@ -4,7 +4,7 @@ public class HelloImpl implements HelloApi {
 
 	@Override
 	public void sayHello() {
-		System.out.println("Hello Word!!");
+		System.out.println("Hello Word!!--HelloImpl");
 
 	}
 
